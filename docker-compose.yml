@@ -1,0 +1,34 @@
+version: '3.8'
+
+# CivilOS - Database only
+# Backend and Frontend run locally (not in Docker)
+# CI/CD pipeline: NOT configured yet (future phase)
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: civilos_db
+    environment:
+      POSTGRES_USER: civilos
+      POSTGRES_PASSWORD: civilos
+      POSTGRES_DB: civilos
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U civilos"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: civilos_redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

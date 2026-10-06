@@ -1,0 +1,13 @@
+{
+  "appTitle": "CivilOS",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "dashboard": "Dashboard",
+  "projects": "Projects",
+  "inventory": "Inventory",
+  "labor": "Labor",
+  "billing": "Billing",
+  "marketplace": "Marketplace",
+  "settings": "Settings"
+}

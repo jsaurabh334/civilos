@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# Go
+backend/main
+backend/civilos.db
+
+# Flutter/Dart
+frontend/build/
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.pub-cache/
+frontend/.pub/
+frontend/ios/Flutter/.last_build_id
+frontend/android/app/build/
+
+# Node/Frontend deps
+node_modules/
+
+# Docker
+.dockerignore
+docker-compose.yml
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.iml
+
+# OS files
+.DS_Store
